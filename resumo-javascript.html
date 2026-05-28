@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Resumo: Capítulo 3 - JavaScript</title>
+		<link href="estilo.css" type="text/css" rel="stylesheet"/>
+		<!--Fontes estilo "fofo", para funcionarem precisam ser 'puxadas' do google-->
+		<title>Resumo: Capítulo 3 - JavaScript</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+	<!-- Class: table-principal, capa e img-capa-->
+	<table class="table-principal" width="100%" border="0" cellpadding="3" cellspacing="5">
+	<tr>
+		<td colspan="2" class="capa">
+			<img 
+			   src = "https://i.pinimg.com/736x/10/c4/25/10c425163c51b9df9c7a7856e752a533.jpg" alt="img de capa" class="img-capa" 
+			   alt = "Capa do livro - Legenda alternative"
+			/>
+		</td>
+	</tr>	
+	
+	<!-- Parte do menu -->
+	<!-- Class: colum-menu e menu-box -->
+	<tr>
+		<td class="colum-menu" width="20%" valign="top" border="0" >
+			<div class="menu-box">
+			<h3>Seções deste Resumo</h3>
+			 	<ul>
+					<li><a href="#intro">Introdução a Programação em JavaScript</a></li>
+					<li><a href="#dados">Variáveis, Constantes, Tipos de Dados e Operadores em JavaScript</a></li>
+					<li><a href="#controle">Usando Estruturas de Controle</a></li>
+					<li><a href="#funcoes">Funções e Tratamento de Erros</a></li>
+					<li><a href="#objetos">Objetos e Arrays</a></li>
+				</ul>
+			</div>
+		</td>
+	
+	<!-- Class: colum-conteudo e titulo-destaque -->
+		<td class="colum-conteudo" width="80%" align="left" >
+			<h1 class="titulo-destaque">Resumo Capítulo 4 - Tornando Páginas Web Interativas com JavaScript</h1>
+
+				<h2 id="intro">Introdução a Programação em JavaScript</h2>
+
+				<h3>Conceito</h3>
+				<p>O JavaScript é uma linguagem de programação usada para criar recursos dinâmicos em sites. O nome oficial que dita as regras e atualizações da linguagem é ECMAScript, e ele ganha novidades todo ano.
+				Existem duas formas principais de usar o JavaScript em uma página web:<p>
+				<ul>
+					<li><b>O jeito recomendado:</b> Salvar o código em um arquivo separado (com final .js) e chamá-lo dentro do seu arquivo HTML usando o comando: <script src="meu-arquivo.js"></script>.</li>
+					<li><b>Direto no HTML:</b> Colocar o código direto na página usando a tag <code>script</code>.</li>
+				</ul>
+			<p>A tag <code>noscript</code>: Serve para mostrar uma mensagem de aviso caso o navegador do usuário esteja com o JavaScript desativado.
+			
+			<p>Para fazer testes rápidos e ver se o código está funcionando, você pode usar dois caminhos:</p>
+
+			<h4>1. Caixas de Alerta (Aparecem na tela do usuário)</h4>
+			<ul>
+				<li><code>alert()</code>: Mostra um balão com uma mensagem e um botão "OK".</li>
+				<li><code>confirm()</code>: Mostra uma mensagem com os botões "OK" e "Cancelar".</li>
+				<li><code>prompt()</code>: Abre uma caixinha para o usuário digitar algum texto.</li>
+			</ul>
+
+			<p>Nota: Como essas caixinhas travam a tela e podem incomodar o usuário, evite usá-las no site final.</p>
+
+			<h4>2. O Console do Desenvolvedor (O jeito ideal)</h4>
+			<p>É uma ferramenta "escondida" no navegador, perfeita para os programadores testarem códigos de forma silenciosa, sem atrapalhar quem está navegando.
+			Os principais comandos são:</p>
+			<ul>
+				<li><code>console.log()</code> ou <code>console.info()</code>: Envia mensagens comuns de texto.</li>
+				<li><code>console.debug()</code>: Usado para mensagens de teste mais detalhadas.</li>
+				<li><code>console.warn()</code>: Mostra um aviso de atenção (geralmente fica amarelo).</li>
+				<li><code>console.error()</code>: Mostra um erro grave (geralmente fica vermelho).</li>
+			</ul>
+
+	<br>
+
+		<h2 id="dados"> Variáveis, Constantes, Tipos de Dados e Operadores em JavaScript</h2>
+		<!-- Class: table1 e text-table1-->
+		<table class="table1" border="1">
+			<thead>
+				<tr>
+					<th colspan="2" align="center"><h2>Definindo Variáveis, Constantes</h2></th>
+				</tr>
+			</thead>
+			<tbody class="text-table1">
+				<tr>
+					<td width = "15%"><b>Variáveis (let e var):</b></td>
+					<td>São caixinhas onde o valor pode mudar ao longo do tempo. No JavaScript moderno, variáveis são criadas usando a palavra-chave let. Você cria a variável e depois dá um valor para ela.
+					Também pode encontrar códigos usando var. É uma forma mais antiga de criar variáveis que funciona de um jeito parecido, mas hoje em dia o let é o mais recomendado.</td>
+				</tr>
+				<tr>
+					<td width = "15%"><b>Constantes (const):</b></td>
+					<td>São caixinhas onde o valor nunca muda. Uma vez que você coloca um dado lá dentro, ele fica fixo até o programa terminar. Constantes são criadas usando a palavra-chave const.
+			É uma convenção entre programadores escrever o nome das constantes todo em letras maiúsculas (exemplo: PI ou URL_DO_SITE). Boa prática: A regra de ouro no JavaScript é: usar sempre const para tudo.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<br>
+
+		<!-- Class: table2 e text-table2-->
+		<table class="table2" border="1">
+			<thead>
+				<tr>
+					<th colspan="2" align="center"><h2>Usando Tipos de Dados</h2></th>
+				</tr>
+			</thead>
+			<tbody class="text-table2">
+				<tr>
+					<td width = "15%"><b>Números (number):</b></td>
+					<td>Servem para fazer contas. No JavaScript, números inteiros (como 5) e números com vírgula (como 5.5) são tratados do mesmo jeito.</td>
+				</tr>
+				<tr>
+					<td width = "15%"><b>Textos (string):</b></td>
+					<td>Qualquer texto que você colocar entre aspas simples ('text') ou aspas duplas ("text"). Também existem as template strings, que usam crases (`text`) e deixam você encaixar variáveis direto no meio do texto usando ${variável}.</td>
+				</tr>
+				<tr>
+					<td width = "15%"><b>Booleanos (boolean):</b></td>
+					<td>São valores de verdadeiro (true) ou falso (false), muito usados para testar condições no código.</td>
+				</tr>
+				<tr>
+					<td width = "15%"><b>Valores vazios (null e undefined):</b></td>
+					<td>Servem para indicar que uma variável não tem nenhum valor ou está totalmente vazia.</td>
+				</tr>
+				<tr>
+					<td width = "15%"><b>Símbolos (symbols):</b></td>
+					<td>Um tipo especial do JavaScript, mas que não foi detalhado no capitulo 4.</td>
+				</tr>
+				<tr>
+					<td width = "15%"><b>Objetos e Arrays:</b></td>
+					<td>Tipos mais complexos que servem para guardar vários valores juntos dentro de uma única variável.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3>Usando operadores</h3>
+			<p>Os operadores são os símbolos que usamos para mexer, juntar e comparar os dados. Os principais são:</p>
+
+		<ul>
+			<li><b>Operadores aritméticos (Matemática):</b> Fazem as contas básicas: somar (`+`), subtrair (`-`), multiplicar (`*`) e dividir (`/`).
+				<ul>
+					<li>O `%` descobre o resto de uma divisão.</li>
+					<li>O `++` aumenta o valor em 1, e o `--` diminui em 1.</li>
+					<li>O `**` serve para fazer potências (ex: <code>2**3</code>).</li>
+				</ul>
+			</li>
+			<li><b>Operador de atribuição (`=`):</b> Serve para guardar um valor dentro de uma variável.</li>
+			<li><b>Operador de concatenação (`+`):</b> Quando você usa o sinal de mais entre dois textos, ele não soma, mas sim junta os textos em um só.</li>
+				<ul>
+					<li>Exemplo: `"Olá, " + "mundo!"` vira `"Olá, mundo!"`.</li>
+				</ul>
+			</li>
+			<li><b>Operadores lógicos e de comparação:</b> Servem para testar condições. O operador `&&` (E) exige que duas condições sejam verdadeiras ao mesmo tempo; o `||` (OU) precisa que apenas uma seja verdadeira. Também existem os que comparam se um valor é igual ou diferente do outro.
+			</li>
+		</ul>
+
+	<br>
+
+	<h2 id="controle">Usando Estruturas de Controle</h2>
+
+	<h3>Usando Declarações Condicionais e Ramificação</h3>
+		<p>As estruturas condicionais funcionam como desvios no trânsito: elas dizem ao computador qual caminho o código deve seguir dependendo do que for verdadeiro ou falso.</p>
+
+		<ul>
+			<li><b>A instrução <code>if</code>:</b> É a condição básica. O código que está dentro das chaves {} só vai rodar se o que estiver dentro dos parênteses () for verdade.</li>
+			<li><b>As ramificações <code>else if</code> e <code>else</code>:</b> Servem para criar caminhos alternativos. O else if cria uma nova pergunta caso a anterior seja falsa. O else é o "plano B" definitivo: ele só roda se nenhuma das condições anteriores der certo.</li>
+			<li><b>O comando <code>switch</code>:</b> É perfeito para substituir vários if e else longos quando você quer testar os diferentes valores de uma mesma variável. Ele olha o valor e vai direto para a opção correspondente (chamada de case).</li>
+		</ul>
+
+	<h3>Usando Loops (Laços de Repetição)</h3>
+		<p>Os loops servem para repetir um bloco de código várias vezes de forma automática, enquanto uma condição for verdadeira. O JavaScript tem três tipos principais:</p>
+
+		<ul>
+			<li><b>Loop de contagem <code>for</code>:</b> É o mais usado quando você já sabe exatamente quantas vezes quer repetir o código. Ele usa uma variável para contar as repetições e, dentro dos parênteses, você define três coisas: onde a contagem começa, qual é o limite para ela parar e como ela deve aumentar (geralmente de 1 em 1).</li>
+			<li><b>Loop controlado pelo início <code>while</code>:</b> Ele checa se a condição é verdadeira antes de rodar o código. Se a condição for falsa logo de cara, o código de dentro do loop não roda nenhuma vez.</li>
+			<li><b>Loop controlado pelo fim <code>do-while</code>:</b> Ele faz o contrário do anterior: primeiro ele roda o código e depois checa a condição. Isso garante que o seu código vai rodar pelo menos uma vez, mesmo que a condição seja falsa desde o começo.</li>
+		</ul>
+
+	<br>
+
+	<h2 id="funcoes">Funções e Tratamento de Erros</h2>
+        <h3>Definindo e Calling Funções</h3>
+		<p>As funções servem para juntar um bloco de código que faz uma tarefa específica. Assim, em vez de reescrever o mesmo código várias vezes, você só precisa chamar a função. No JavaScript, existem três formas principais de criar uma função:</p>
+
+		<ul>
+			<li><b>Declaração de função:</b> É o jeito tradicional. Você usa a palavra function, dá um nome para ela, coloca parênteses () e chaves {}.</li>
+			<li><b>Expressão de função:</b> É quando você cria uma função sem nome (anônima) e a guarda dentro de uma variável.</li>
+			<li><b>Arrow Functions:</b> É um jeito moderno e mais curto de escrever funções, usando o símbolo de uma seta (=>).</li>
+		    <li><b>Chamando função:</b> Não importa o jeito que você criou a função, para fazer ela funcionar você só precisa digitar o nome dela seguido de parênteses, assim: nomeDaFuncao().</li>
+		</ul>
+
+	<h3>Parâmetros e Argumentos</h3>
+	    <p>Para que uma função seja útil em situações diferentes, você pode enviar informações para dentro dela.
+		<b>Parâmetros</b> são os nomes que você coloca dentro dos parênteses na hora de criar a função (eles funcionam como variáveis do lado de dentro). 
+		<b>Argumentos</b> são os dados reais que você envia para esses parâmetros na hora de chamar a função.</p>
+
+	<h3>Valores de Retorno (return)</h3>
+		<p>Enquanto os parâmetros servem para enviar dados para dentro da função, o return serve para enviar um resultado para fora dela.</p>
+
+	<h3>Atenção:</h3> 
+		<p>Assim que o JavaScript encontra a palavra return, a função faz o cálculo, envia o resultado de volta e para de rodar imediatamente. Qualquer código que estiver abaixo do return será ignorado.</p>
+
+	<h3>Tratamento de Erros</h3>
+		<p>Para evitar que o seu programa trave do nada, você precisa lidar com os erros. No JavaScript, os problemas costumam ser de três tipos: erros de digitação (sintaxe), erros que acontecem enquanto o programa roda (tempo de execução) e erros de lógica (quando o código roda, mas o resultado sai errado).</p>
+
+	<ul>
+		<li><b>Geração ativa de erros (<code>throw</code>):</b> Se alguma regra do seu sistema for violada, você pode parar o programa manualmente e avisar que algo deu errado usando o comando throw new Error('Mensagem de erro').</li>
+		<li><b>A estrutura <code>try-catch</code>:</b> É a rede de proteção do código. No bloco <code>try</code>, você coloca o código que tem risco de dar algum erro.
+		Se algo falhar ali dentro, o JavaScript para o <code>try</code> na hora e pula direto para o bloco <code>catch</code>(error). Lá dentro, você decide o que fazer com o erro (como mostrar uma mensagem amigável na tela) para evitar que o site ou aplicativo trave completamente para o usuário.
+		</li>	
+	</ul>
+
+	<br>
+
+	<h2 id="objetos">Objetos e Arrays</h2>
+	<h3>Usando Objetos</h3>
+		<p>Objetos são como "caixas" organizadas que guardam informações (variáveis) e ações (funções) que têm a ver com o mesmo assunto.</p>
+	<ul>
+		<li><b>Notação literal de objeto {}: </b> A forma mais simples de criar um objeto é abrindo e fechando chaves {}.</li>
+		<li><b>Propriedades e Métodos: </b> O que está dentro das chaves são as propriedades (as características do objeto, como cor ou tamanho) e os métodos (as funções que o objeto pode executar, como "correr" ou "ligar").</li>
+		<li><b>Notação de Ponto (.): </b> Para ver, mudar ou ativar algo dentro do objeto, você usa o nome dele seguido de um ponto e o nome do que quer acessar. Exemplo: objeto.propriedade.</li>
+		<li><b>Palavra-chave <code>this</code>: </b> Quando você usa <code>this</code> dentro de um método, ele significa "este objeto aqui". Serve para o objeto conseguir mexer nas suas próprias propriedades. Exemplo: <code>this.nome</code>.</li>
+	</ul>
+
+	<h3>Usando Arrays</h3>
+		<p>Arrays (também chamados de listas ou vetores) servem para guardar vários dados de uma vez só, em forma de lista sequencial.</p>
+	<ul>
+		<li><b>Notação literal de array []: </b> Você cria uma lista colocando os dados dentro de colchetes [] e separando cada um por vírgula.</li>
+		<li><b>Índices Numéricos Posicionais(Posição na lista): </b> O JavaScript começa a contar as posições do array do número 0. O primeiro item fica no índice 0, o segundo no índice 1, e assim por diante. Exemplo: <code>lista[0]</code>.</li>
+		<li><b>Inserção Dinâmica de dados: </b> Você pode colocar um dado em uma posição vazia (ex: <code>cores[3] = 'laranja'</code>) ou usar o comando <code>.push()</code>, que joga o novo item direto para o final da lista.</li>
+		<li><b>Mapeamento e Iteração Cíclica: </b> Para olhar item por item de um array, usamos laços de repetição (como o for). Para o código saber o tamanho exato da lista, usamos o comando <code>.length</code>.</li>
+	</ul>
+
+	<!-- Class: table3 e text-table3 -->
+	<table class="table3" border="1">
+		<thead>
+			<tr>
+				<th colspan="2" align="center"><h2>Comandos úteis para Arrays</h2></th>
+			</tr>
+		</thead>
+		<tbody class="text-table3">
+			<tr>
+				<td width = "18%"><b>.concat(): </b></td>
+				<td>Junta duas listas em uma só.</td>
+			</tr>
+			<tr>
+				<td width = "18%"><b>.filter(): </b></td>
+				<td>Cria uma nova lista apenas com os itens que passarem em um teste.</td>
+			</tr>
+			<tr>
+				<td width = "18%"><b>.forEach(): </b></td>
+				<td>Passa por cada item da lista para fazer alguma ação.</td>
+			</tr>
+			<tr>
+				<td width = "18%"><b>.join(): </b></td>
+				<td>Junta todos os itens da lista e os transforma em um único texto.</td>
+			</tr>
+			<tr>
+				<td width = "18%"><b>.map(): </b></td>
+				<td>Altera todos os itens da lista de uma vez e cria uma lista nova com os resultados.</td>
+			</tr>
+			<tr>
+				<td width = "18%"><b>.pop(): </b></td>
+				<td>Apaga o último item da lista.</td>
+			</tr>
+			<tr>
+				<td width = "18%"><b>.reverse(): </b></td>
+				<td>Inverte a ordem da lista (o que estava no fim vai para o começo).</td>
+			</tr>
+			<tr>
+				<td width = "18%"><b>.shift(): </b></td>
+				<td>Apaga o primeiro item da lista.</td>
+			</tr>
+			<tr>
+				<td width = "18%"><b>.slice(): </b></td>
+				<td>Corta e pega um pedaço específico da lista.</td>
+			</tr>
+			<tr>
+				<td width = "18%"><b>.splice(): </b></td>
+				<td>Tira ou adiciona itens em qualquer posição que você escolher.</td>
+			</tr>
+			<tr>
+				<td width = "18%"><b>.sort(): </b></td>
+				<td>Organiza a lista em ordem (alfabética ou numérica).</td>
+			</tr>
+		</tbody>
+	</table>
+	<script src="main.js"></script>
+   </body>
+</html>

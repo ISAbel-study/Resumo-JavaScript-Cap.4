@@ -1,0 +1,187 @@
+/*Arquivo CSS  para o design e layout da página*/
+
+/*Fredoka é a principal fonte*/
+body {
+	font-family: 'Fredoka', 'Quicksand' , 'Nunito' , sans-serif !important /* !important para garantir que essa fonte seja usada mesmo se houver outras regras conflitantes */;
+	margin: 0;
+	background: linear-gradient(135deg, #f9d7e7 0%, #d8c0f1 100%);
+	color: #5D4037;
+	line-height: 1.6;
+}
+
+.table-principal{
+	border-collapse: collapse;
+}
+
+/* A capa que vai ficar no topo*/
+.capa{
+	background-color: #f1f0ff;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 3px solid #fff;
+	overflow: hidden;
+}
+
+/*Confi. da imagem*/
+.img-capa{
+	height: 120px;        /* um pouco menor que a capa para ter margem */
+	width: auto;          /* mantém a proporção original da imagem */
+    object-fit: cover;  /* garante que a imagem não distorça */
+	border-radius: 13px; /*Borda arredondado na imagem da capa*/
+}
+
+.colum-menu{
+	padding: 20px 0 20px 20px;
+	vertical-align: top;
+}
+
+/*Caixa do menu*/
+.menu-box{
+	background-color: #e0e0ff;
+	padding: 15px 20px;
+	border-right: 2px solid #ccc;
+	vertical-align: top;
+	border-radius: 15px;
+}
+
+.menu-box h3{
+	color: #be96f9;
+	margin-top:0;
+}
+
+.menu-box ul{
+	padding-left: 18px;
+}
+
+.menu-box a{
+	color:  #9b7fba;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.menu-box a:hover{
+	text-decoration: underline;
+	color: #f76da7;
+}
+
+.colum-conteudo{
+	padding: 40px 60px;
+	vertical-align: top;
+}
+
+/*Título h1 formatado bonito*/
+.titulo-destaque{
+	background-color:  #a599c9;
+	padding: 10px 25px;
+	border-radius: 50px;
+	text-align: center;
+	color: #fff8d3;
+	display: inline-block; /*para a 'bolha' não ocupar a largura toda*/
+	margin-top: 0;
+	margin-bottom: 30px;
+	box-shadow: 0 4px 10px rgba(179,136,255,0.3);
+}
+
+/*Textos h2*/
+h2 {
+	color: #F472B6;
+	padding-left: 12px;
+	text-transform: uppercase;
+	margin-top: 40px;
+}
+
+h3{
+	color: #795548;		
+}
+
+p, li, .texto-tabela{
+	color: #8a5d51;
+	font-size: 18px;
+}
+
+/*Imagens formatadas*/
+.img-codigo{
+	display:block;
+	max-width:100%;
+	margin: 20px 0;
+	padding: 10px;
+	border-radius: 20px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.15); /*efeito de 'sombra'*/
+}
+
+/* Formatação base das três tabelas*/
+.table1, .table2, .table3{
+	width: 100%;
+	margin-top: 25px;
+	border-radius: 10px;
+	overflow: hidden; /*para a bordar arredondada funcionar*/
+	border-collapse: separate;
+	border-spacing: 0;
+	box-shadow: 0 6px 15px rgba(0,0,0,0.03);
+}
+
+/*Formatação dentro da tabela*/
+.table1 th, .table1 td,
+.table2 th, .table2 td,
+.table3 th, .table3 td{
+	padding: 15px;
+	text-align: left;
+}
+
+.table1 th h2, .table2 th h2, .table3 th h2{
+	color: white;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	text-transform: none; /*Retira o uppercase*/
+	text-align: center;
+}
+
+/* Formatação da table 1: tema rosa pastel*/
+.table1{
+	background-color: #fad7e8;
+	border: 2px solid #ffccd5
+}
+
+.table1 th{
+	background-color: #ffb3d0;
+}
+
+.table1 td{
+	border-bottom: 1px solid #ffe3e8;
+}
+
+/* Formatação da table 2: tema lilás */
+.table2 {
+	background-color: #f4e9fd; /* Fundo interno lilás bem clarinho */
+	border: 2px solid #e1bee7;
+}
+.table2 th {
+	background-color: #ce93d8; /* Topo Roxo Lilás */
+}
+.table2 td {
+	border-bottom: 1px solid #f3e5f5;
+}
+
+/* Formatação da table 1: tema verde pastel */
+.table3 {
+	background-color: #f0fdf4; /* Fundo interno menta bem clarinho */
+	border: 2px solid #b9f6ca;
+}
+.table3 th {
+	background-color: #81c784; /* Topo Verde-Menta */
+}
+.table3 td {
+	border-bottom: 1px solid #e8f5e9;
+}
+
+code{
+	background-color: #a599c9;
+	padding: 3px 8px;
+	border-radius: 8px;
+	font-family:'Fira Code', monospace;
+	font-size: 0.9em;
+	color: #ffefc4;
+}
